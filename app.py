@@ -16,9 +16,6 @@ class ExampleApp(QMainWindow):
     def __init__(self):
         super().__init__()
 
-
-
-
         self.volume_selected = False
         self.paid = False
         self.selected_volume = -1
@@ -26,12 +23,11 @@ class ExampleApp(QMainWindow):
         self.fill_timer = None
         self.fill_bottle = False
 
-
         self.ui = design.Ui_MainWindow()
         self.ui.setupUi(self)
 
-
-        self.ui.welcome_text.setText('Ожидание выбора объема')
+        #начальный интрефейс
+        self.reset_program()
 
         # первый этап: выбор объема
         self.ui.water1.clicked.connect(lambda: self.selection_volume(1))
@@ -82,10 +78,6 @@ class ExampleApp(QMainWindow):
                 self.bottle()
             elif i == 6:
                 self.filling_bottle()
-            elif i == 7:
-                pass
-
-
         else:
             self.ui.welcome_text.setText('Объем не выбран')
             self.timer(0)
@@ -97,6 +89,7 @@ class ExampleApp(QMainWindow):
             card_balance = self.read_card_balance  # Read the card's balance from a text file
 
             if card_balance >= self.selected_volume and self.selected_volume != -1:
+                #self.ui.card.move(224, 434)
                 self.paid = True
                 self.update_card_balance(card_balance,
                                          self.selected_volume)  # Deduct the selected volume from the card's balance
@@ -123,12 +116,10 @@ class ExampleApp(QMainWindow):
     def bottle(self):
         if self.paid and self.volume_selected:
             self.ui.welcome_text.setText('Ожидание пуска')
-            self.ui.bottle.move(30, 220)
+            self.ui.bottle.move(80, 240)
             self.ui.bottle.raise_()
         else:
             self.ui.welcome_text.setText('вы лох')
-
-
 
     def filling_bottle(self):
         if self.filling:
@@ -165,7 +156,6 @@ class ExampleApp(QMainWindow):
             self.reset_program()
         else:
             pass
-
 
     def reset_program(self):
 
