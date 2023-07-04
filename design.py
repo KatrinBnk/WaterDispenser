@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledjYYzkH.ui'
+## Form generated from reading UI file 'untitledwDcdDU.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.4.3
 ##
@@ -194,11 +194,8 @@ class Ui_MainWindow(object):
         self.true_card.setStyleSheet(u"")
         self.put_bottle = QPushButton(self.font_market)
         self.put_bottle.setObjectName(u"put_bottle")
-        self.put_bottle.setGeometry(QRect(545, 305, 121, 31))
+        self.put_bottle.setGeometry(QRect(590, 300, 121, 31))
         self.put_bottle.setStyleSheet(u"")
-        self.bottle = QLabel(self.font_market)
-        self.bottle.setObjectName(u"bottle")
-        self.bottle.setGeometry(QRect(405, 285, 261, 266))
         self.card = QLabel(self.font_market)
         self.card.setObjectName(u"card")
         self.card.setGeometry(QRect(745, 250, 126, 111))
@@ -216,15 +213,9 @@ class Ui_MainWindow(object):
         self.pick_up_bottle.setObjectName(u"pick_up_bottle")
         self.pick_up_bottle.setGeometry(QRect(590, 455, 121, 31))
         self.pick_up_bottle.setStyleSheet(u"")
-        self.bottle.raise_()
-        self.market.raise_()
-        self.verticalLayoutWidget.raise_()
-        self.true_card.raise_()
-        self.put_bottle.raise_()
-        self.card.raise_()
-        self.false_card.raise_()
-        self.false_card_frame.raise_()
-        self.pick_up_bottle.raise_()
+        self.bottle = QLabel(self.font_market)
+        self.bottle.setObjectName(u"bottle")
+        self.bottle.setGeometry(QRect(445, 290, 126, 231))
         MainWindow.setCentralWidget(self.all_market)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -265,9 +256,9 @@ class Ui_MainWindow(object):
         self.checkBox_5.setText(QCoreApplication.translate("MainWindow", u"\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0435 \u0437\u0430\u0432\u0440\u0448\u0435\u043d\u0438\u0435", None))
         self.true_card.setText(QCoreApplication.translate("MainWindow", u"\u043f\u0440\u0438\u043b\u043e\u0436\u0438\u0442\u044c \u043a\u0430\u0440\u0442\u0443", None))
         self.put_bottle.setText(QCoreApplication.translate("MainWindow", u"\u043f\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u0431\u0443\u0442\u044b\u043b\u043a\u0443", None))
-        self.bottle.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/newPrefix/2.png\"/></p></body></html>", None))
         self.card.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/newPrefix/4.png\"/></p></body></html>", None))
         self.false_card.setText(QCoreApplication.translate("MainWindow", u"\u043f\u0440\u0438\u043b\u043e\u0436\u0438\u0442\u044c \u043e\u0431\u043c\u0430\u043d\u043a\u0443", None))
         self.pick_up_bottle.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0431\u0440\u0430\u0442\u044c \u0442\u0430\u0440\u0443", None))
+        self.bottle.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><img src=\":/newPrefix/2.png\"/></p></body></html>", None))
     # retranslateUi
 

@@ -1,13 +1,13 @@
 import sys
 import os
-from PyQt6 import QtWidgets
+from PyQt6 import QtWidgets, QtCore, QtGui
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout
 from PySide6.QtCore import QTimer
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QMouseEvent
 from PyQt6.QtCore import Qt, QMimeData
 from PyQt6.QtGui import QDrag, QPixmap
-from PyQt6.QtCore import Qt, QPoint
+from PyQt6.QtCore import Qt, QPoint, QRect
 
 import design
 
@@ -15,14 +15,22 @@ import design
 class ExampleApp(QMainWindow):
     def __init__(self):
         super().__init__()
+
+
+
+
         self.volume_selected = False
         self.paid = False
         self.selected_volume = -1
         self.filling = False
         self.fill_timer = None
+        self.fill_bottle = False
+
 
         self.ui = design.Ui_MainWindow()
         self.ui.setupUi(self)
+
+
         self.ui.welcome_text.setText('Ожидание выбора объема')
 
         # первый этап: выбор объема
@@ -41,9 +49,10 @@ class ExampleApp(QMainWindow):
         self.ui.pushButton.clicked.connect(lambda: self.reset_text(6))
 
         # пятый этап: забрать тару
-        self.ui.pick_up_bottle.clicked.connect(lambda: self.reset_text(7))
+        self.ui.pick_up_bottle.clicked.connect(lambda: self.Pick_UP_bottle())
 
         # движение объектов
+
 
 
     def selection_volume(self, volume):
@@ -114,8 +123,12 @@ class ExampleApp(QMainWindow):
     def bottle(self):
         if self.paid and self.volume_selected:
             self.ui.welcome_text.setText('Ожидание пуска')
+            self.ui.bottle.move(30, 220)
+            self.ui.bottle.raise_()
         else:
             self.ui.welcome_text.setText('вы лох')
+
+
 
     def filling_bottle(self):
         if self.filling:
@@ -143,10 +156,16 @@ class ExampleApp(QMainWindow):
         self.filling = False
         if self.fill_timer is not None:
             self.fill_timer.stop()
-        self.ui.welcome_text.setText('Экстренная остановка')
-
-    def stop(self):
         self.ui.welcome_text.setText('Заберите тару')
+        self.fill_bottle = True
+
+    def Pick_UP_bottle(self):
+        if self.fill_bottle:
+            self.ui.bottle.move(445, 290)
+            self.reset_program()
+        else:
+            pass
+
 
     def reset_program(self):
 
@@ -158,6 +177,7 @@ class ExampleApp(QMainWindow):
         if self.fill_timer is not None:
             self.fill_timer.stop()
         self.fill_timer = None
+        self.fill_bottle = False
 
         # сброс кнопок
         self.ui.water1.setChecked(False)
