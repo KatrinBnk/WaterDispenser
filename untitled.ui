@@ -24,7 +24,21 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(217, 217, 217);</string>
+     <string notr="true">QFrame{
+	background-color: rgb(217, 217, 217);
+}
+
+.QPushButton {
+	background-color: rgb(230, 255, 148);
+	border-radius: 15%;
+	border : 1px solid black
+  }
+.QPushButton:hover {
+      ;
+	background-color: rgb(255, 95, 42);
+      transition: 0.7s;
+  }
+</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -84,7 +98,7 @@
         <x>30</x>
         <y>220</y>
         <width>181</width>
-        <height>211</height>
+        <height>241</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -287,10 +301,10 @@ line-height: normal;</string>
      <widget class="QFrame" name="get_kard">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>435</y>
-        <width>120</width>
-        <height>80</height>
+        <x>224</x>
+        <y>434</y>
+        <width>136</width>
+        <height>81</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -305,10 +319,10 @@ line-height: normal;</string>
       <widget class="QLabel" name="kard_text">
        <property name="geometry">
         <rect>
-         <x>3</x>
-         <y>25</y>
-         <width>116</width>
-         <height>16</height>
+         <x>5</x>
+         <y>5</y>
+         <width>131</width>
+         <height>71</height>
         </rect>
        </property>
        <property name="text">
@@ -329,7 +343,7 @@ line-height: normal;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(105, 255, 130);</string>
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -337,7 +351,190 @@ line-height: normal;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-200</y>
+         <width>466</width>
+         <height>341</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/3.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
      </widget>
+    </widget>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>470</x>
+       <y>15</y>
+       <width>221</width>
+       <height>174</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Инструкция</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="text">
+         <string>Выбор объема</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_2">
+        <property name="text">
+         <string>Приложите карту</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_6">
+        <property name="text">
+         <string>Поставьте тару</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_3">
+        <property name="text">
+         <string>Пуск (пуск/стоп)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_4">
+        <property name="text">
+         <string>Экстренное завершение(пуск/стоп)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_5">
+        <property name="text">
+         <string>Автоматическое завршение</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QPushButton" name="true_card">
+     <property name="geometry">
+      <rect>
+       <x>745</x>
+       <y>215</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>приложить карту</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="put_bottle">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>300</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>поставить бутылку</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="card">
+     <property name="geometry">
+      <rect>
+       <x>745</x>
+       <y>265</y>
+       <width>126</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/4.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="false_card">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>385</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>приложить обманку</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="false_card_frame">
+     <property name="geometry">
+      <rect>
+       <x>745</x>
+       <y>440</y>
+       <width>120</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(89, 255, 178);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pick_up_bottle">
+     <property name="geometry">
+      <rect>
+       <x>590</x>
+       <y>455</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Забрать тару</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="bottle">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>290</y>
+       <width>126</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/newPrefix/2.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
     </widget>
    </widget>
   </widget>
@@ -353,6 +550,8 @@ line-height: normal;</string>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>
